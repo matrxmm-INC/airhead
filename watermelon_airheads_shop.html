@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Single Watermelon Airhead | $1.00 Perfection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .melon-gradient { background: linear-gradient(135deg, #FF1E56 0%, #10B981 100%); }
+        .melon-text-gradient { background: linear-gradient(135deg, #FF1E56 0%, #10B981 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col selection:bg-rose-500 selection:text-white">
+
+    <div class="bg-rose-600 text-white text-xs font-semibold py-2 px-4 text-center tracking-wider uppercase">
+        🍉 Exactly One Legendary Watermelon Airhead &bull; Just $1.00 🍉
+    </div>
+
+    <header class="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="switchView('home')">
+                <div class="w-10 h-10 rounded-2xl bg-rose-500 flex items-center justify-center text-white shadow-lg shadow-rose-500/30 transform hover:rotate-12 transition-transform">
+                    <i class="fa-solid fa-candy-cane text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-2xl font-extrabold tracking-tight text-slate-900">AIRHEAD<span class="text-rose-600">.</span></span>
+                    <span class="block text-[10px] uppercase font-bold tracking-widest text-emerald-600">Watermelon Edition</span>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-slate-600">
+                <button onclick="switchView('home')" id="nav-home" class="transition-colors hover:text-rose-600 text-rose-600 font-semibold">The Bar</button>
+                <button onclick="switchView('story')" id="nav-story" class="transition-colors hover:text-rose-600">Flavor Profile</button>
+                <button onclick="switchView('reviews')" id="nav-reviews" class="transition-colors hover:text-rose-600">Fan Reviews</button>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <button onclick="toggleCart()" class="relative p-2.5 rounded-full bg-slate-100 hover:bg-rose-50 hover:text-rose-600 transition-colors">
+                    <i class="fa-solid fa-bag-shopping text-lg"></i>
+                    <span id="cart-badge" class="absolute -top-1 -right-1 bg-rose-600 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow-md hidden">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+
+        <!-- VIEW: HOME -->
+        <div id="view-home" class="view-section py-12 lg:py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left: Real Product Image Showcase -->
+                    <div class="lg:col-span-6 relative">
+                        <div class="absolute -inset-4 bg-gradient-to-tr from-rose-500/20 to-emerald-400/20 rounded-3xl blur-2xl -z-10"></div>
+                        <div class="bg-gradient-to-br from-rose-500 via-rose-600 to-emerald-600 rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden flex flex-col items-center text-center">
+                            <div class="absolute top-0 right-0 w-48 h-48 bg-white/10 rounded-full blur-xl transform translate-x-12 -translate-y-12"></div>
+                            
+                            <!-- Candy Wrapper Graphic Container with Exact Image -->
+                            <div class="w-full max-w-sm bg-white text-slate-900 rounded-2xl p-6 shadow-2xl transform hover:scale-105 transition-transform duration-300 relative my-4">
+                                <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-emerald-500 text-white text-[10px] uppercase font-extrabold px-3 py-1 rounded-full shadow z-10">
+                                    Official $1.00 Single Bar
+                                </div>
+                                <div class="h-64 rounded-xl bg-slate-50 overflow-hidden flex items-center justify-center my-4 shadow-inner relative border border-slate-200 p-4">
+                                    <img src="https://www.image2url.com/r2/default/images/1788149765401-22e1e8e6-e9e8-4860-b198-f4296f844363.png" 
+                                         alt="Watermelon Airhead Single Bar" 
+                                         class="max-h-full max-w-full object-contain transform hover:scale-110 transition-transform duration-500 drop-shadow-md">
+                                </div>
+                                <h4 class="font-extrabold text-xl text-slate-900">Watermelon Airhead</h4>
+                                <p class="text-xs text-slate-500 mt-1">Full-Sized Stretchy Taffy Strip</p>
+                                <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+                                    <span class="text-xs text-slate-400 font-bold uppercase">Price</span>
+                                    <span class="text-2xl font-black text-rose-600">$1.00</span>
+                                </div>
+                            </div>
+                            
+                            <span class="text-xs text-rose-100 font-medium tracking-wide uppercase">Pure Sugar &bull; Zero Compromise</span>
+                        </div>
+                    </div>
+
+                    <!-- Right: Product Details & Purchase Controls -->
+                    <div class="lg:col-span-6 space-y-6">
+                        <div class="inline-flex items-center space-x-2 bg-emerald-100 text-emerald-800 px-4 py-1.5 rounded-full text-xs font-bold tracking-wide uppercase">
+                            <i class="fa-solid fa-check-circle"></i>
+                            <span>In Stock & Ready to Ship</span>
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
+                            One Single <span class="melon-text-gradient">Watermelon Airhead</span>
+                        </h1>
+                        <p class="text-lg text-slate-600 leading-relaxed">
+                            Sometimes you don't need a whole box. Grab exactly one legendary, mouth-puckering watermelon-flavored chewy taffy bar for just a single dollar.
+                        </p>
+
+                        <!-- Quantity and Buy Area -->
+                        <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-6">
+                            <div class="flex items-center justify-between">
+                                <span class="font-bold text-slate-700">Select Quantity:</span>
+                                <div class="flex items-center space-x-3">
+                                    <button onclick="adjustQty(-1)" class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold flex items-center justify-center transition-colors">-</button>
+                                    <span id="single-qty" class="text-xl font-black w-8 text-center">1</span>
+                                    <button onclick="adjustQty(1)" class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold flex items-center justify-center transition-colors">+</button>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                                <div>
+                                    <span class="text-xs text-slate-400 block uppercase font-bold">Total Investment</span>
+                                    <span id="single-total-price" class="text-3xl font-black text-slate-900">$1.00</span>
+                                </div>
+                                <button onclick="addSingleToCart()" class="px-8 py-4 rounded-full bg-rose-600 hover:bg-rose-700 text-white font-bold text-base shadow-xl shadow-rose-600/30 transition-transform transform hover:-translate-y-0.5">
+                                    Add to Bag
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Highlights -->
+                        <div class="grid grid-cols-2 gap-4 pt-2">
+                            <div class="flex items-center space-x-3 p-4 rounded-2xl bg-white border border-slate-100 shadow-xs">
+                                <i class="fa-solid fa-bolt text-rose-500 text-lg"></i>
+                                <span class="text-sm font-bold text-slate-700">Extreme Tang</span>
+                            </div>
+                            <div class="flex items-center space-x-3 p-4 rounded-2xl bg-white border border-slate-100 shadow-xs">
+                                <i class="fa-solid fa-hand-holding-hand text-emerald-500 text-lg"></i>
+                                <span class="text-sm font-bold text-slate-700">Endless Stretch</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIEW: STORY -->
+        <div id="view-story" class="view-section hidden py-16">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 text-center">
+                <span class="text-xs font-bold uppercase tracking-widest text-rose-600 bg-rose-100 px-3 py-1 rounded-full">The One & Only</span>
+                <h1 class="text-4xl font-extrabold text-slate-900">Anatomy of a $1.00 Masterpiece</h1>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    Crafted with precision, our single watermelon airhead delivers an intense wave of summer melon refreshment followed by a signature tart finish. At precisely one dollar, it is the ultimate accessible luxury.
+                </p>
+                <div class="p-8 rounded-3xl bg-rose-500 text-white shadow-xl space-y-4">
+                    <h3 class="text-2xl font-black">Why One Dollar?</h3>
+                    <p class="text-rose-100 text-sm">
+                        Because everyone deserves access to world-class watermelon candy without committing to a bulk package. One bar. One dollar. Pure satisfaction.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIEW: REVIEWS -->
+        <div id="view-reviews" class="view-section hidden py-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+                <div class="text-center space-y-3">
+                    <span class="text-xs font-bold uppercase tracking-widest text-emerald-600 bg-emerald-100 px-3 py-1 rounded-full">Fan Feedback</span>
+                    <h1 class="text-4xl font-extrabold text-slate-900">What People Say About the $1 Bar</h1>
+                </div>
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+                    <div class="flex text-amber-400 space-x-1 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-700 italic text-base">"I walked in with a single dollar bill and walked out experiencing pure watermelon ecstasy. 10/10 would spend again."</p>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="font-bold text-slate-900">Tyler M.</span>
+                        <span class="text-xs text-slate-400">Verified $1.00 Spender</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Cart Drawer -->
+    <div id="cart-drawer" class="fixed inset-0 z-50 overflow-hidden hidden">
+        <div class="absolute inset-0 bg-slate-900/50 backdrop-blur-sm transition-opacity" onclick="toggleCart()"></div>
+        <div class="absolute inset-y-0 right-0 max-w-full flex pl-10">
+            <div class="w-screen max-w-md bg-white shadow-2xl flex flex-col">
+                <div class="p-6 border-b border-slate-200 flex items-center justify-between bg-slate-50">
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-solid fa-bag-shopping text-rose-600 text-xl"></i>
+                        <h2 class="text-lg font-extrabold text-slate-900">Your Candy Bag</h2>
+                    </div>
+                    <button onclick="toggleCart()" class="p-2 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-200">
+                        <i class="fa-solid fa-xmark text-lg"></i>
+                    </button>
+                </div>
+
+                <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-4 custom-scrollbar">
+                    <!-- Populated via JS -->
+                </div>
+
+                <div class="p-6 border-t border-slate-200 bg-slate-50 space-y-4">
+                    <div class="flex justify-between text-lg font-extrabold text-slate-900">
+                        <span>Total</span>
+                        <span id="cart-total">$1.00</span>
+                    </div>
+                    <button onclick="checkout()" class="w-full py-3.5 rounded-full bg-rose-600 hover:bg-rose-700 text-white font-bold shadow-lg shadow-rose-600/30 transition-transform transform hover:-translate-y-0.5">
+                        Complete Purchase ($1.00)
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Modal -->
+    <div id="notification-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-sm hidden">
+        <div class="bg-white rounded-3xl p-6 max-w-sm w-full shadow-2xl text-center space-y-4">
+            <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto text-xl">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 id="modal-title" class="text-lg font-bold text-slate-900">Success!</h3>
+            <p id="modal-desc" class="text-sm text-slate-600">Item added to your bag.</p>
+            <button onclick="window.closeModal()" class="w-full py-2.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm">
+                Continue
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let currentQty = 1;
+        let cart = [];
+
+        window.switchView = function(viewId) {
+            document.querySelectorAll('.view-section').forEach(el => el.classList.add('hidden'));
+            document.getElementById(`view-${viewId}`).classList.remove('hidden');
+            
+            ['home', 'story', 'reviews'].forEach(v => {
+                const btn = document.getElementById(`nav-${v}`);
+                if(btn) {
+                    if(v === viewId) {
+                        btn.className = "transition-colors hover:text-rose-600 text-rose-600 font-semibold";
+                    } else {
+                        btn.className = "transition-colors hover:text-rose-600 text-slate-600 font-medium";
+                    }
+                }
+            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        window.adjustQty = function(change) {
+            currentQty += change;
+            if(currentQty < 1) currentQty = 1;
+            document.getElementById('single-qty').textContent = currentQty;
+            document.getElementById('single-total-price').textContent = `$${(currentQty * 1.00).toFixed(2)}`;
+        }
+
+        window.addSingleToCart = function() {
+            const existing = cart.find(item => item.id === 1);
+            if(existing) {
+                existing.qty += currentQty;
+            } else {
+                cart.push({
+                    id: 1,
+                    name: "Watermelon Airhead (Single)",
+                    price: 1.00,
+                    qty: currentQty
+                });
+            }
+            updateCartBadge();
+            showModal("Added to Bag!", `${currentQty} Watermelon Airhead(s) added for $${(currentQty * 1.00).toFixed(2)}.`);
+            currentQty = 1;
+            window.adjustQty(0);
+        }
+
+        window.toggleCart = function() {
+            const drawer = document.getElementById('cart-drawer');
+            drawer.classList.toggle('hidden');
+            renderCart();
+        }
+
+        window.updateCartQuantity = function(change) {
+            const item = cart.find(i => i.id === 1);
+            if(item) {
+                item.qty += change;
+                if(item.qty <= 0) {
+                    cart = [];
+                }
+            }
+            renderCart();
+            updateCartBadge();
+        }
+
+        function renderCart() {
+            const container = document.getElementById('cart-items');
+            const totalEl = document.getElementById('cart-total');
+
+            if(cart.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-12 text-slate-400 space-y-3">
+                        <i class="fa-solid fa-basket-shopping text-4xl"></i>
+                        <p class="text-sm font-medium">Your bag is empty.</p>
+                    </div>
+                `;
+                totalEl.textContent = '$0.00';
+                return;
+            }
+
+            const item = cart[0];
+            const total = item.price * item.qty;
+            container.innerHTML = `
+                <div class="flex items-center justify-between p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-rose-600 shrink-0 overflow-hidden p-1 border border-slate-200">
+                            <img src="https://www.image2url.com/r2/default/images/1788149765401-22e1e8e6-e9e8-4860-b198-f4296f844363.png" class="w-full h-full object-contain">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-slate-900">${item.name}</h4>
+                            <span class="text-xs text-slate-500">$1.00 each</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <button onclick="window.updateCartQuantity(-1)" class="w-7 h-7 rounded-lg bg-white border border-slate-200 text-slate-600 flex items-center justify-center font-bold text-xs hover:bg-slate-100">-</button>
+                        <span class="text-sm font-bold w-6 text-center">${item.qty}</span>
+                        <button onclick="window.updateCartQuantity(1)" class="w-7 h-7 rounded-lg bg-white border border-slate-200 text-slate-600 flex items-center justify-center font-bold text-xs hover:bg-slate-100">+</button>
+                    </div>
+                </div>
+            `;
+            totalEl.textContent = `$${total.toFixed(2)}`;
+        }
+
+        function updateCartBadge() {
+            const badge = document.getElementById('cart-badge');
+            const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+            if(totalCount > 0) {
+                badge.textContent = totalCount;
+                badge.classList.remove('hidden');
+            } else {
+                badge.classList.add('hidden');
+            }
+        }
+
+        window.checkout = function() {
+            if(cart.length === 0) {
+                showModal('Bag Empty', 'Please add your $1.00 Airhead before checking out.');
+                return;
+            }
+            window.toggleCart();
+            showModal('Order Successful!', 'Thank you! Your single watermelon airhead is ready.');
+            cart = [];
+            updateCartBadge();
+        }
+
+        function showModal(title, desc) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-desc').textContent = desc;
+            document.getElementById('notification-modal').classList.remove('hidden');
+        }
+
+        window.closeModal = function() {
+            document.getElementById('notification-modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
